@@ -50,7 +50,7 @@ function addItem() {
 
   let itemListRemoveBtn = document.createElement("td");
   let newBtn = document.createElement("button");
-  newBtn.className = "btn btn-danger";
+  newBtn.className = "btn btn-removed";
   newBtn.addEventListener("click", removeItem);
   newBtn.innerText = "Remove";
   itemListRemoveBtn.appendChild(newBtn);
@@ -115,7 +115,7 @@ function reconstructItemList(e) {
       if (i == 3) {
         let itemListRemoveBtn = document.createElement("td");
         let newBtn = document.createElement("button");
-        newBtn.className = "btn btn-remove";
+        newBtn.className = "btn btn-removed";
         newBtn.addEventListener("click", removeItem);
         newBtn.innerText = "Remove";
         itemListRemoveBtn.appendChild(newBtn);
