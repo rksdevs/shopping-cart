@@ -18,14 +18,15 @@
     <title>Shopping Cart</title>
   </head>
   <body>
-    <div class="main-container">
+    <div class="main-container container-fluid">
       <header class="main-heading">
-        <h1 class="heading-head">Shopping Card</h1>
+        <h1 class="heading-head">Shopping Cart</h1>
       </header>
-      <section class="main-content">
+      <section class="main-content container-sm">
         <div class="items-form">
           <form id="form">
-            <label for="item-name">Name</label>
+            <div class="add-item-contents">
+              <label for="item-name">Name</label>
             <input type="text" id="cart-item-name" name="item-name" />
             <label for="item-price">Price</label>
             <input
@@ -40,13 +41,51 @@
               id="cart-item-quantity"
               name="item-quantity"
               max="10"
-              min="0"
+              min="1"
             />
-            <button type="button" class="btn btn-primary">Add Item</button>
+            </div>
+            
+            <div class="add-item-button">
+              <button type="button" class="btn" onclick="addItem()">
+                Add Item
+              </button>
+            </div>
+            
           </form>
         </div>
-        <div class="items-list"></div>
+        <div class="items-list">
+          <table class="table" id="item-table">
+            <thead>
+              <tr class="item-list-head">
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Remove</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="item-list-body">
+              <!-- <tr>
+                <td colspan="4">Total Price</td>
+              </tr> -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Total Price</td>
+                <td id="total-price">0</td>
+              </tr>
+            </tfoot>
+          </table>
+          <div class="checkout-btn">
+            <button type="button" class="btn" onclick="checkout()">
+              Checkout
+            </button>
+          </div>
+        </div>
       </section>
+      <footer class="main-footer">
+        <h4 class="footer-head">&#169 rakesh-creates.in 2021</h4>
+      </footer>
     </div>
 
     <script

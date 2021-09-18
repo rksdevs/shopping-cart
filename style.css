@@ -9,5 +9,109 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6em;
-  background-color: #fee9d7;
+  background-color: #f1d1b5;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heading-head {
+  margin: 1em 0;
+  text-shadow: 0 5px 10px black;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0;
+  background-color: #f18c8e;
+  font-weight: 900;
+  padding: 0.5em 0;
+}
+
+.add-item-button button {
+  background-color: #8c3941;
+  color: white;
+  font-weight: 500;
+}
+
+tr td .btn-remove {
+  background-color: #f0b7a4;
+  font-weight: 500;
+  padding: 3px;
+}
+
+.checkout-btn button {
+  background-color: #8c3941;
+  color: white;
+  font-weight: 500;
+}
+
+.checkout-btn button:hover {
+  color: black;
+  background-color: #f18c8e;
+  box-shadow: 0 0 10px black;
+}
+
+.checkout-btn {
+  margin: 1.5em 0 0 0;
+}
+
+.add-item-button button:hover {
+  color: black;
+  background-color: #f18c8e;
+  box-shadow: 0 0 10px black;
+}
+
+.add-item-contents input {
+  vertical-align: text-top;
+}
+
+.add-item-contents label {
+  vertical-align: -webkit-baseline-middle;
+}
+
+.table {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #305f72;
+  color: #fff;
+}
+
+.item-list-body {
+  text-align: center;
+}
+
+.item-list-head {
+  padding-bottom: 0.5em;
+}
+
+.footer-head {
+  text-shadow: 0 0 10px black;
+  margin: 1.5em 0;
+}
+
+/* .btn-remove {
+  background-color: #b5525c;
+} */
+
+@media only screen and (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+
+  .add-item-contents {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 1em;
+  }
 }
